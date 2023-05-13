@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fotoshoot</title>
+    <link rel="stylesheet" href="mainpagestyle.css">
+</head>
+
+<body>
+	<div class="loader"></div>
+	
+	<div class="main-content">
+	 <button class="burger" onclick="toggleMenu()"></button>
+    <div class="menu">
+      <nav>
+        <a href="Galeria.php" style="animation-delay: 0.2s">Gallery</a>
+        <a href="about.html" style="animation-delay: 0.4s">About</a>
+        <a href="Fotoshoot.php" style="animation-delay: 0.5s">Log out</a>
+      </nav>
+    </div>
+	<header>
+		<nav id="logo" class="navi">
+			<a href="mainpage.html"><img class="logo" src="logo.png"></a>
+			<img class="message" src="message.png">
+		</nav>
+	</header>
+	
+	<main>
+    <section id="content">
+        <section class="image-grid container">
+            <div class="image_cont">
+                <img src="1.jpg" alt="">
+            </div>
+            <div class="image_cont">
+                <img src="https://images.unsplash.com/photo-1569596082827-c5e8990496cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500" alt="">
+            </div>
+            <div class="image_cont">
+                <img src="https://images.unsplash.com/photo-1587932775991-708a20af2cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDQ5Mg&ixlib=rb-1.2.1&q=80&w=500" alt="">
+            </div>
+            <div class="image_cont">
+                <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNTU3OA&ixlib=rb-1.2.1&q=85&w=1200" alt="">
+            </div>
+            <div class="image_cont">
+                <img src="https://images.unsplash.com/photo-1623166200209-6bd48520d6cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDg3NQ&ixlib=rb-1.2.1&q=80&w=500" alt="">
+            </div>
+            <div class="image_cont">
+                <img src="5.jpeg" alt="">
+			</div>
+			
+		</section>
+	</main>
+<div class="spacer"></div>
+</section>
+</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollSmoother.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        const smoother = ScrollSmoother.create({
+            content: "#content",
+            smooth: 3,
+            effects: true
+        });
+
+        smoother.effects("img", { speed: "auto" });
+    </script>
+	<script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+	 <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var loader = document.querySelector(".loader");
+            var mainContent = document.querySelector(".main-content");
+			var Message = document.querySelector(".message");
+            setTimeout(function() {
+                loader.style.display = "none";
+                mainContent.style.opacity = "1";
+				Message.style.opacity="1";
+            }, 2000); // Adjust the time in milliseconds. 3000 ms = 3 seconds
+        });
+    </script>
+	<script>
+const hideScrollbar = () => {
+  const scrollBarCSS = `
+    ::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: #000000;
+      opacity: 0.5;
+    }
+  `;
+
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.appendChild(document.createTextNode(scrollBarCSS));
+  document.head.appendChild(style);
+}
+
+hideScrollbar();
+
+</script>
+</body>
+</html>

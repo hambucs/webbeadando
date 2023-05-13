@@ -1,0 +1,28 @@
+$fekete:#111;
+body{
+    background-color:$fekete;
+
+}
+#drag-me {
+    width: 100px;
+    height: 100px;
+    background-color: #f00;
+    position: absolute;
+  }
+  
+  #drop-zone {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+  
+  circle {
+    cx: 50;
+    cy: 50;
+    r: 40;
+    fill: #00f;
+  }
+  
+  #my-canvas {
+    background-color: #eee;
+  }

@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
+:root {
+  --bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: white;
+  background: #111;
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: hsl(0, 0%, 80%);
+  width: 90vw;
+  max-width: 1200px;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  height: 7em;
+  font-family: "Euclid Circular A", "Poppins";
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  letter-spacing: 0.5em;
+}
+#cookie-notification {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: transparent;
+			backdrop-filter: blur(15px);
+			padding: 10px;
+			text-align: center;
+			z-index:1111;
+			border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+		}
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: visible;
+}
+section .outer,
+section .inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+	
+section .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+section .bg h2 {
+  z-index: 2;
+}
+
+section .bg .clip-text {
+  overflow: hidden;
+}
+
+.first .bg {
+	background-image: var(--bg-gradient), 
+		url("b1.jpg");
+}
+
+.second .bg{
+    background-image: var(--bg-gradient),
+      url("b2.jpg");
+}
+
+.third .bg{
+    background-image: var(--bg-gradient),
+      url("b3.jpg");
+}
+
+.fourth .bg{
+    background-image: var(--bg-gradient),
+      url("b4.jpg");
+}
+
+.fifth .bg {
+  background-image: var(--bg-gradient), url("b5.jpg");
+  background-position: 50% 45%;
+}
+
+h2 * {
+  will-change: transform;
+}
+.logo{
+	padding-right: 0px;
+	margin: 10px;
+	margin-right: 0px;
+	height: 50px;
+	width: 180px;
+}
+.main-content {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.loader {
+	 position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	 z-index: 9999;
+  width: 48px;
+  height: 48px;
+}
+.loader::before , .loader::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  width: 48em;
+  height: 48em;
+  background-image:
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0),
+    radial-gradient(circle 10px, #FFF 100%, transparent 0);
+  background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em,
+                       13em -13em, -13em -13em, 13em 13em, -13em 13em;
+    background-repeat: no-repeat;
+  font-size: 0.5px;
+  border-radius: 50%;
+  animation: blast 1s ease-in infinite;
+}
+.loader::after {
+  font-size: 1px;
+  background: #fff;
+  animation: bounce 1s ease-in infinite;
+}
+
+@keyframes bounce {
+  0% , 100%{ font-size: 0.75px }
+  50% { font-size: 1.5px }
+}
+@keyframes blast {
+  0% , 40% {
+    font-size: 0.5px;
+  }
+  70% {
+    opacity: 1;
+    font-size: 4px;
+  }
+   100% {
+     font-size: 6px;
+    opacity: 0;
+  }
+}
+.overlay {
+position: fixed;
+height: 100vh;
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-column-gap: 1rem;
+grid-row-gap: 10rem;
+width: 100vw;
+margin: 0 auto;
+z-index: -1;div {
+    opacity: 0.2;
+    border-left: 0.5px white solid;
+    border-right: 0.5px white solid;
+}
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 3px;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0px;
+  border-radius: 5px;
+}
+
+.icon-close{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	z-index: 1;
+	justify-content: center;
+	align-items: center;
+	
+	border-bottom-left-radius: 20px;
+	cursor: pointer;
+	--c: #000;
+  
+  color: #0000;
+  background: 
+    linear-gradient(90deg,#000 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+}
+.icon-close:hover {
+  background-color: #000;
+   --_p: 100%;
+}
+
+.form-box{
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+	transform: scale(0);
+	transition: transform .25s ease;
+	overflow: hidden;
+
+}
+.activelogin{
+	transform: scale(1) translate(-50%, -50%); 
+}
+.loginbox{
+	transition: transform .18s ease;
+	transform: translateX(0);
+}
+.active .loginbox{
+	transition: none;
+	transform: translateX(-400px);
+}
+.registrationbox{
+	position: absolute;
+	transition: none;
+	transform: translateX(400px);
+}
+.active .registrationbox{
+	transition: transform .18s ease;
+	transform: translateX(0);
+}
+h3{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.error {
+   background: #fff;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+   text-align: center;
+   display: none;
+   transition: 0.5s;
+}
+
+.success {
+   background: #fff;
+   color: #40754C;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+   text-align: center;
+   display: none;
+   transition: .5s;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+button {
+	width: 100%;
+    height: 40px;
+    border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  --c: #fff;
+  
+  color: #0000;
+  background: 
+    linear-gradient(90deg,#000 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.5s;
+  margin-left: 0px;
+}
+
+.accept{
+	width: 100;
+}
+button:hover {
+  background-color: #fff;
+  color: #000;
+   --_p: 100%;
+}

@@ -1,5 +1,5 @@
 <html lang="en">
-<head>
+<head> 
 	<title>Fotoshoot</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="Galeriastyle.css">

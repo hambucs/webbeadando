@@ -1,0 +1,16 @@
+{
+  "menuItems": [
+    {
+      "name": "gallery",
+      "url": "Galeria.php"
+    },
+    {
+      "name": "about",
+      "url": "about.html"
+    },
+    {
+      "name": "logout",
+      "url": "fotoshoot.php"
+    }
+  ]
+}

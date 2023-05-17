@@ -1,5 +1,5 @@
 <html lang="en">
-<head> 
+<head>
 	<title>Fotoshoot</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="Galeriastyle.css">
@@ -13,8 +13,8 @@
     <div class="menu">
       <nav>
         <a style="animation-delay: 0.2s" onclick="showUploadForm()" >Upload</a>
-        <a href="about.html" style="animation-delay: 0.4s">About</a>
-        <a href="Fotoshoot.php" style="animation-delay: 0.5s">Log out</a>
+        <a href="index.php?page=about" style="animation-delay: 0.4s">About</a>
+        <a href="index.php?page=logout" style="animation-delay: 0.5s">Log out</a>
       </nav>
     </div>
 	<div class="alma">

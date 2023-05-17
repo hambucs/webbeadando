@@ -1,4 +1,4 @@
-<html>  
+<html>
 <head>
 	<title>Fotoshoot</title>
 	<meta charset="utf-8">
@@ -81,7 +81,7 @@
   <div class="outer">
     <div class="inner">
       <div class="bg">
-        <h2 class="section-heading">There are some secret..</h2>
+        <h2 class="section-heading">There are some secrets...</h2>
       </div>
     </div>
   </div>
